@@ -1,3 +1,5 @@
+![もやもや](https://i.imgur.com/XDpXNLu.png)
+
 # vue-cli-practice
 
 ## Project setup
@@ -7,23 +9,12 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
-yarn run serve
-npm run serve
+$ npm run serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
+$ npm run build
 ```
 
 ### Customize configuration
