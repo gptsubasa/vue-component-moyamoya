@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: #ddd;
+  font: 30px sans-serif;
+}
+
+.container {
+    min-width: 100%;
+    margin-top: 50px;
+    position: relative;
+}

@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <span v-for="moya in moyamoyas">
+      <Moyamoya :width="moya.width" :height="moya.height" :max="moya.max" :color="moya.color"></Moyamoya>
+    </span>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Moyamoya from './components/Moyamoya'
 
 export default {
-  name: 'app',
   components: {
-    HelloWorld
+    Moyamoya
+  },
+  data () {
+    return {
+      moyamax: 40,
+      moyamoyas: []
+    }
+  },
+  created () {
+    for(var i=0; i<this.moyamax; i++){
+      this.moyamoyas.push({
+        width: 150,
+        height: 150,
+        max: 8 + parseInt(Math.random() * 4, 10),
+        color: "rgb(" + (~~(256 * Math.random())) + ", " + (~~(256 * Math.random())) + ", " + (~~(256 * Math.random())) + ")"
+      })
+    }
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
